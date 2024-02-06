@@ -13,6 +13,7 @@ script = ExtResource("1_6djrp")
 shape = SubResource("RectangleShape2D_8sww1")
 
 [node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.980392)
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
