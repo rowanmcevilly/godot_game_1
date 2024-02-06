@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctuup5xfxytgs"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_38dhf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_38dhf")
+
+[node name="play" type="Button" parent="."]
+offset_left = 438.0
+offset_top = 58.0
+offset_right = 891.0
+offset_bottom = 179.0
+scale = Vector2(0.701489, 0.955061)
+text = "play
+"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 433.0
+offset_top = 281.0
+offset_right = 766.0
+offset_bottom = 412.0
+text = "quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(594, 243)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

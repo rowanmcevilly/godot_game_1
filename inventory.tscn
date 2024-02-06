@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjsynyhj6s6p4"]
+
+[ext_resource type="Script" path="res://inventory.gd" id="1_kqw3m"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_kqw3m")
+
+[node name="inventory" type="Panel" parent="."]
+visible = false
+offset_left = 370.0
+offset_top = 170.0
+offset_right = 1524.0
+offset_bottom = 842.0
+
+[node name="quit" type="Button" parent="."]
+offset_left = 1740.0
+offset_top = 28.0
+offset_right = 1887.0
+offset_bottom = 107.0
+text = "quit
+"
+
+[node name="menu" type="Button" parent="."]
+offset_left = 1536.0
+offset_top = 32.0
+offset_right = 1677.0
+offset_bottom = 105.0
+text = "menu
+"
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
