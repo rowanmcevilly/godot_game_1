@@ -7,7 +7,22 @@ func _on_quit_pressed():
 
 
 func _on_menu_pressed():
-	if $inventory.visible:
-		$inventory.visible = false
+	if $menuGUI.visible:
+		$menuGUI.visible = false
+		$menu.visible = true
 	else:
-		$inventory.visible = true
+		$menuGUI.visible = true
+		$menu.visible = false
+
+
+func _on_back_pressed():
+	if $menuGUI.visible:
+		$menuGUI.visible = false
+		$menu.visible = true
+	else:
+		$menuGUI.visible = true
+		$menu.visible = false
+
+
+func _on_inventory_pressed():
+	pass # Replace with function body.

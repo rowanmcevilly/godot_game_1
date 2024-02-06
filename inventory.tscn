@@ -1,32 +1,172 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjsynyhj6s6p4"]
+[gd_scene load_steps=5 format=3 uid="uid://bjsynyhj6s6p4"]
 
 [ext_resource type="Script" path="res://inventory.gd" id="1_kqw3m"]
+[ext_resource type="Texture2D" uid="uid://b241qgote162f" path="res://graphics/icon.svg" id="2_hp8cq"]
+[ext_resource type="Script" path="res://slot.gd" id="3_4vqg2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bf0lc"]
+texture = ExtResource("2_hp8cq")
 
 [node name="Node" type="Node"]
 script = ExtResource("1_kqw3m")
 
-[node name="inventory" type="Panel" parent="."]
+[node name="menuGUI" type="ColorRect" parent="."]
 visible = false
 offset_left = 370.0
 offset_top = 170.0
-offset_right = 1524.0
-offset_bottom = 842.0
+offset_right = 1522.0
+offset_bottom = 841.0
 
-[node name="quit" type="Button" parent="."]
-offset_left = 1740.0
-offset_top = 28.0
-offset_right = 1887.0
-offset_bottom = 107.0
+[node name="inventory" type="Button" parent="menuGUI"]
+layout_mode = 0
+offset_right = 264.0
+offset_bottom = 77.0
+text = "inventory"
+
+[node name="settings" type="Button" parent="menuGUI"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = -1.0
+offset_right = 566.0
+offset_bottom = 76.0
+text = "settings
+"
+
+[node name="back" type="Button" parent="menuGUI"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 2.0
+offset_right = 860.0
+offset_bottom = 79.0
+text = "back
+"
+
+[node name="quit" type="Button" parent="menuGUI"]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 79.0
 text = "quit
 "
 
+[node name="ColorRect2" type="ColorRect" parent="menuGUI"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 146.0
+offset_right = 1089.0
+offset_bottom = 610.0
+color = Color(0.054902, 0.482353, 0.709804, 1)
+
+[node name="GridContainer" type="GridContainer" parent="menuGUI/ColorRect2"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 25.0
+offset_right = 1001.0
+offset_bottom = 458.0
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 5
+
+[node name="slot1" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot2" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot3" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot4" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot5" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot6" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot7" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot8" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot9" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot10" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot11" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot12" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot13" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot14" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
+[node name="slot15" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+script = ExtResource("3_4vqg2")
+
 [node name="menu" type="Button" parent="."]
-offset_left = 1536.0
-offset_top = 32.0
-offset_right = 1677.0
-offset_bottom = 105.0
+offset_left = 1717.0
+offset_top = 38.0
+offset_right = 1858.0
+offset_bottom = 111.0
 text = "menu
 "
 
-[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="menuGUI/inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="menuGUI/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="menuGUI/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
