@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8aoo7mbgp7m4"]
+[gd_scene load_steps=7 format=3 uid="uid://c8aoo7mbgp7m4"]
 
 [ext_resource type="PackedScene" uid="uid://1qekapqxq5uf" path="res://player.tscn" id="1_b8ylf"]
 [ext_resource type="Script" path="res://world.gd" id="1_qf14c"]
@@ -6,8 +6,11 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hygk5"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mftry"]
+size = Vector2(459, 42)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dal3"]
-size = Vector2(458, 46)
+size = Vector2(38.625, 138.75)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_qf14c")
@@ -18,18 +21,33 @@ position = Vector2(565, 188)
 [node name="Camera2D2" type="Camera2D" parent="player"]
 zoom = Vector2(2, 2)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="floor" type="StaticBody2D" parent="."]
+collision_mask = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="floor_collider" type="CollisionShape2D" parent="floor"]
 material = SubResource("CanvasItemMaterial_hygk5")
-position = Vector2(564, 277)
-shape = SubResource("RectangleShape2D_0dal3")
+position = Vector2(563.5, 277)
+shape = SubResource("RectangleShape2D_mftry")
 
-[node name="Panel" type="Panel" parent="StaticBody2D"]
+[node name="Panel" type="Panel" parent="floor"]
 offset_left = 333.0
 offset_top = 255.0
 offset_right = 794.0
 offset_bottom = 299.0
+
+[node name="wall" type="StaticBody2D" parent="."]
+collision_mask = 7
+
+[node name="wall_collider" type="CollisionShape2D" parent="wall"]
+material = SubResource("CanvasItemMaterial_hygk5")
+position = Vector2(356, 202)
+shape = SubResource("RectangleShape2D_0dal3")
+
+[node name="Panel" type="Panel" parent="wall"]
+offset_left = 338.0
+offset_top = 132.0
+offset_right = 375.0
+offset_bottom = 269.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
