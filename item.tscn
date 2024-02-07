@@ -3,8 +3,10 @@
 [ext_resource type="Script" path="res://item.gd" id="1_p7rqc"]
 
 [node name="item" type="Node2D"]
+z_index = 1
 script = ExtResource("1_p7rqc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2

@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjsynyhj6s6p4"]
+[gd_scene load_steps=5 format=3 uid="uid://by1qj53lehqro"]
 
 [ext_resource type="Script" path="res://inventory.gd" id="1_kqw3m"]
 [ext_resource type="Texture2D" uid="uid://b241qgote162f" path="res://graphics/icon.svg" id="2_hp8cq"]
 [ext_resource type="Script" path="res://slot.gd" id="3_4vqg2"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bf0lc"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4151p"]
 texture = ExtResource("2_hp8cq")
 
-[node name="Node" type="Node"]
+[node name="inventory" type="Node2D"]
 script = ExtResource("1_kqw3m")
 
 [node name="menuGUI" type="ColorRect" parent="."]
@@ -17,13 +17,13 @@ offset_top = 170.0
 offset_right = 1522.0
 offset_bottom = 841.0
 
-[node name="inventory" type="Button" parent="menuGUI"]
+[node name="inventory_tab" type="Button" parent="menuGUI"]
 layout_mode = 0
 offset_right = 264.0
 offset_bottom = 77.0
 text = "inventory"
 
-[node name="settings" type="Button" parent="menuGUI"]
+[node name="settings_tab" type="Button" parent="menuGUI"]
 layout_mode = 0
 offset_left = 302.0
 offset_top = -1.0
@@ -71,91 +71,91 @@ columns = 5
 [node name="slot1" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot2" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot3" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot4" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot5" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot6" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot7" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot8" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot9" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot10" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot11" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot12" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot13" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot14" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="slot15" type="Panel" parent="menuGUI/ColorRect2/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bf0lc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4151p")
 script = ExtResource("3_4vqg2")
 
 [node name="menu" type="Button" parent="."]
@@ -166,7 +166,6 @@ offset_bottom = 111.0
 text = "menu
 "
 
-[connection signal="pressed" from="menuGUI/inventory" to="." method="_on_inventory_pressed"]
 [connection signal="pressed" from="menuGUI/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="menuGUI/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

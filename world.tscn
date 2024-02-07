@@ -1,54 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8aoo7mbgp7m4"]
+[gd_scene load_steps=6 format=3 uid="uid://ddyoketlsd0nn"]
 
 [ext_resource type="PackedScene" uid="uid://1qekapqxq5uf" path="res://player.tscn" id="1_b8ylf"]
 [ext_resource type="Script" path="res://world.gd" id="1_qf14c"]
-[ext_resource type="PackedScene" uid="uid://bjsynyhj6s6p4" path="res://inventory.tscn" id="3_fyuyc"]
+[ext_resource type="PackedScene" uid="uid://by1qj53lehqro" path="res://inventory.tscn" id="4_rijs1"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hygk5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv0ch"]
+size = Vector2(268, 708)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mftry"]
-size = Vector2(459, 42)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dal3"]
-size = Vector2(38.625, 138.75)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fattx"]
+size = Vector2(970, 241.5)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_qf14c")
 
 [node name="player" parent="." instance=ExtResource("1_b8ylf")]
-position = Vector2(565, 188)
+position = Vector2(856, 108)
 
-[node name="Camera2D2" type="Camera2D" parent="player"]
-zoom = Vector2(2, 2)
-
-[node name="floor" type="StaticBody2D" parent="."]
-collision_mask = 7
-
-[node name="floor_collider" type="CollisionShape2D" parent="floor"]
-material = SubResource("CanvasItemMaterial_hygk5")
-position = Vector2(563.5, 277)
-shape = SubResource("RectangleShape2D_mftry")
-
-[node name="Panel" type="Panel" parent="floor"]
-offset_left = 333.0
-offset_top = 255.0
-offset_right = 794.0
-offset_bottom = 299.0
-
-[node name="wall" type="StaticBody2D" parent="."]
-collision_mask = 7
-
-[node name="wall_collider" type="CollisionShape2D" parent="wall"]
-material = SubResource("CanvasItemMaterial_hygk5")
-position = Vector2(356, 202)
-shape = SubResource("RectangleShape2D_0dal3")
-
-[node name="Panel" type="Panel" parent="wall"]
-offset_left = 338.0
-offset_top = 132.0
-offset_right = 375.0
-offset_bottom = 269.0
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(0, 2)
+zoom = Vector2(1.5, 1.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Node" parent="CanvasLayer" instance=ExtResource("3_fyuyc")]
+[node name="inventory" parent="CanvasLayer" instance=ExtResource("4_rijs1")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(238, 216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(134, 357)
+shape = SubResource("RectangleShape2D_xv0ch")
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D"]
+offset_right = 268.0
+offset_bottom = 718.0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(496, 682)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(499, 128)
+shape = SubResource("RectangleShape2D_fattx")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 984.0
+offset_bottom = 250.0
