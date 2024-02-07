@@ -1,5 +1,7 @@
 extends Marker2D
 
+
+
 const bulletPath = preload("res://bullet.tscn")
 
 func _physics_process(delta):
@@ -16,8 +18,8 @@ func _unhandled_input(event):
 func shoot():
 	var bullet = bulletPath.instantiate()
 	get_parent().get_parent().add_child(bullet)
-	bullet.global_position = $Marker2D.global_position
-	bullet.global_rotation = $Marker2D.global_rotation
+	bullet.global_position = $weapon.global_position
+	bullet.global_rotation = $weapon.global_rotation
 	var velo = Vector2(cos(bullet.global_rotation), sin(bullet.global_rotation))
 	velo *= 1000
 	bullet.linear_velocity = velo

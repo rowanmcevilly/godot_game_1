@@ -1,9 +1,6 @@
-res://world.tscn
 res://menu.tscn
 res://player.tscn
 res://bullet.tscn
 res://item.tscn
 res://inventory.tscn
-res://inventory.gd
-res://player.gd
-res://slot.gd
+res://weapon.gd
