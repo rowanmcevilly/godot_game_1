@@ -1,15 +1,37 @@
 extends Node2D
 
 const slot_class = preload("res://slot.gd")
+const hotbar_class = preload("res://hotbar.gd")
 const world_class = preload("res://world.tscn")
-@onready var inventory_slots = $menuGUI/ColorRect2/GridContainer
+@onready var inventory_slots = $menuGUI/ColorRect2/storage
+@onready var hotbar_slots = $menuGUI/ColorRect2/hotbar
 var holding_item = null
 
 func _ready():
 	for inv_slot in inventory_slots.get_children():
 		inv_slot.gui_input.connect(slot_gui_input.bind(inv_slot))
+	for hot_slot in hotbar_slots.get_children():
+		hot_slot.gui_input.connect(hotbar_gui_input.bind(hot_slot))
 
 func slot_gui_input(event: InputEvent, slot: slot_class):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+			if holding_item != null:
+				if !slot.item:
+					slot.put_in_slot(holding_item)
+					holding_item = null
+				else:
+					var temp_item = slot.item
+					slot.pick_from_slot()
+					temp_item.global_position = event.global_position
+					slot.put_in_slot(holding_item)
+					holding_item = temp_item
+			elif slot.item:
+				holding_item = slot.item
+				slot.pick_from_slot()
+				holding_item.global_position = get_global_mouse_position()
+
+func hotbar_gui_input(event: InputEvent, slot: hotbar_class):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
 			if holding_item != null:

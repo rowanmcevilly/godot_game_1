@@ -20,9 +20,9 @@ position = Vector2(856, 108)
 position = Vector2(0, 2)
 zoom = Vector2(1.5, 1.5)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="inventory_holder" type="CanvasLayer" parent="."]
 
-[node name="inventory" parent="CanvasLayer" instance=ExtResource("4_rijs1")]
+[node name="inventory" parent="inventory_holder" instance=ExtResource("4_rijs1")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(238, 216)
