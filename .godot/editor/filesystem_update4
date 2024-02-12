@@ -3,7 +3,4 @@ res://player.tscn
 res://bullet.tscn
 res://item.tscn
 res://inventory.tscn
-res://world.tscn
-res://weapon.gd
-res://hotbar_controller.gd
-res://hotbar.gd
+res://world1.tscn

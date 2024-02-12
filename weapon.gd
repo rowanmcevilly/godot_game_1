@@ -12,5 +12,5 @@ func _input(event):
 			if int(event.as_text_key_label()) <= 3 && int(event.as_text_key_label()) >= 1:
 				if int(event.as_text_key_label()):
 					var item = find_parent("world").find_child("hotbar").get_hotbar_item(int(event.as_text_key_label()))
-					print(item.find_child("TextureRect").texture)
 					get_node("weapon_tex").texture = item.find_child("TextureRect").texture
+					print(find_parent("world").find_child("hotbar").find_child("hotbar1").get_item_scene())

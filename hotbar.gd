@@ -15,7 +15,10 @@ func _ready():
 	default_style.texture = default_tex
 	empty_style.texture = empty_tex
 	refresh_styles()
-	
+
+func get_item_scene():
+	return itemScene
+
 func refresh_styles():
 	if item == null:
 		set("custom_styles/panel", empty_style)
@@ -36,6 +39,6 @@ func put_in_slot(new_item):
 	var inventoryNode = find_parent("inventory")
 	inventoryNode.remove_child(item)
 	add_child(item)
-	print(item.find_child("TextureRect").texture)
+	#print(item.find_child("TextureRect").texture)
 	get_parent().slot_change()
 	refresh_styles()
